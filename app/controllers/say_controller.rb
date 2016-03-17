@@ -6,7 +6,7 @@ class SayController < ApplicationController
   end
   def contacts
   end
-  def dostavkaioplata
+  def delivery
   end
 
 end

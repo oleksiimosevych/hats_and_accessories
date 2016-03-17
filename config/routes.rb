@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'say/index'
   get 'say/about'
   get 'say/contacts'
-  get 'say/dostavkaioplata'
+  get 'say/delivery'
   #додали і тепер треба команду 
   #rake routes. DONE))
 
