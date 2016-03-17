@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   get 'say/about'
   get 'say/contacts'
   get 'say/dostavkaioplata'
-  #додали і тепер треба команду rake routes
+  #додали і тепер треба команду 
+  #rake routes. DONE))
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
