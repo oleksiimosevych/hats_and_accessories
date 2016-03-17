@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   #ми створили 1 контроллер say, який назвало say_controller, але у нього - це таке як суфікс _controller. У ньому є 5 методів(екшенів). Тут ми його даємо в корінь
+ #робимо індекс екшн дефолтним
   root 'say#index'
 
   # Example of regular route:
