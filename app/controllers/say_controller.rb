@@ -4,7 +4,7 @@ class SayController < ApplicationController
 
   /def goodbye
   end/
-#замість home краще буде index. Ми створили нові контроллери для статичних сторінок
+#замість home краще буде index. Ми створили нові ЕКШЕНИ!!! для статичних сторінок
   def index
   end
   def about

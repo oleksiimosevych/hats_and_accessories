@@ -14,8 +14,8 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  #ми створили 1 контроллер say, який назвало say_controller, але у нього - це таке як суфікс _controller. У ньому є 5 методів(екшенів). Тут ми його даємо в корінь
+  root 'say#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
