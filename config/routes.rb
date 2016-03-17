@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
-  get 'say/hello'
-
-  get 'say/goodbye'
+  
+  # цікаво якщо я їх закоментую воно буде працювати норм?)get 'say/hello'
+  #get 'say/goodbye'
+  
+  #додаємо тут роути для статичних сторінок
+  get 'say/index'
+  get 'say/about'
+  get 'say/contacts'
+  get 'say/dostavkaioplata'
+  #додали і тепер треба команду rake routes
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
