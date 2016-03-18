@@ -1,4 +1,4 @@
-class SayController < ApplicationController
+class StaticController < ApplicationController
 #замість home краще буде index. Ми створили нові ЕКШЕНИ!!! для статичних сторінок
   def index
   end
@@ -8,5 +8,10 @@ class SayController < ApplicationController
   end
   def delivery
   end
+#new methods for other static
+  def faq
+  end
+  #def review
+  #end
 
 end
