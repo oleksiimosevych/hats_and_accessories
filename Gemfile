@@ -23,7 +23,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 #Halleluja! Ce dopomohlo[ua] It helped)
-gem 'therubyracer'
+#gem 'therubyracer'
+gem 'nodejs-rails', '~> 0.0.1'
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 #tut she kod[ua]
 gem "twitter-bootstrap-rails"
 
