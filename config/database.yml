@@ -39,3 +39,4 @@ production:
   #socket: **/opt/local/var/run/mysql5/mysqld.sock**
   #rake db:create to cmd
 #more help for converting from sqlite to mysql)))  http://stackoverflow.com/questions/1670154/convert-a-ruby-on-rails-app-from-sqlite-to-mysql
+#more info how to import db. https://www.youtube.com/watch?v=wOW9OhUPwUA I need to go to windows to copy it from there because my linux can not connect to my hdds in ntfs
