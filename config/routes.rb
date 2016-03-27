@@ -13,7 +13,9 @@ Rails.application.routes.draw do
   #get 'say/review'
   #додали і тепер треба команду 
   #rake routes. DONE))
-resources :pages
+resources :products
+resources :goods_groups
+resources :genders
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

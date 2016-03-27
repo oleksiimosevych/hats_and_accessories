@@ -1,0 +1,5 @@
+<%=simple_form_for(@gender) do |f| %>
+  <%= f.error_notification%>
+  <%=f.input :gender_name %>
+  <%=f.submit 'Save' %>
+<% end %>

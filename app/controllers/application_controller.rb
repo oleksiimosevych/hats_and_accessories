@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 #щоби змінна Пейджес була весь час під рукою
   before_filter :nav_menu
   def nav_menu
-  	@pages = Page.all
+  	@products = Product.all
+  	@genders = Gender.all
+  	@goods_groups = GoodsGroup.all
   end
 end

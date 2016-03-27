@@ -5,8 +5,8 @@
 			<a href="#" class="list-group-item active">Топ продажу</a>
             <a href="#" class="list-group-item">Виробник: Україна</a>
             <p><br>Головні убори:</p>
-			<% @pages.each do |page| %><!--ТУТ МУСИТЬ БУТИ ІНША  ТАБЛИЦЯ! ТАБЛИЦЯ З ГРУПАМИ ТОВАРІВ!!!-->
-			<div class="list-group-item"><%=link_to page.name, page_path(page) %></div>
+			<% @goods_groups.each do |goods_group| %><!--ТУТ МУСИТЬ БУТИ ІНША  ТАБЛИЦЯ! ТАБЛИЦЯ З ГРУПАМИ ТОВАРІВ!!!-->
+			<div class="list-group-item"><%=link_to goods_group.goods_group_name, goods_group_path(goods_group) %></div>
 			<% end %>
 			<a href="#" class="list-group-item">Весна 2016(в'язані шапочки)</a>
             <a href="#" class="list-group-item">Шапки для молоді</a>
@@ -26,3 +26,4 @@
 			</p>
           </div>
         </div><!--/.sidebar-offcanvas-->
+        
