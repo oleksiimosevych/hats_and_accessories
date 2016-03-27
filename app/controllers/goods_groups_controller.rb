@@ -42,7 +42,7 @@ class GoodsGroupsController < ApplicationController
 			redirect_to goods_groups_path, error: 'Не вдалося знищити запис...'
 		end
 	end
-	def find_goodsgroup
+	def find_goods_group
       #рубі знає що куди підставляти
 	  #але ми розказуємо йому що робити тут
 	  @goods_group = GoodsGroup.find(params[:id])

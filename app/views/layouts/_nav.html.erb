@@ -8,14 +8,7 @@
 			<% @goods_groups.each do |goods_group| %><!--ТУТ МУСИТЬ БУТИ ІНША  ТАБЛИЦЯ! ТАБЛИЦЯ З ГРУПАМИ ТОВАРІВ!!!-->
 			<div class="list-group-item"><%=link_to goods_group.name, goods_groups_path(goods_group) %></div>
 			<% end %>
-			<a href="#" class="list-group-item">Весна 2016(в'язані шапочки)</a>
-            <a href="#" class="list-group-item">Шапки для молоді</a>
-            <a href="#" class="list-group-item">Шапочки для дітей та підлітків</a>
-            <a href="#" class="list-group-item">Шапочки для хлопчиків та дівчаток(зима 2016)</a>
-            <a href="#" class="list-group-item">Шапки Чоловічі</a>
-            <a href="#" class="list-group-item">Шапки Жіночі</a>
-            <a href="#" class="list-group-item">Шарфи</a>
-			<br>
+            <br>
 			<div class="list-group-item"><%= link_to "Про компанію", static_about_path %></div>
 			<div class="list-group-item"><%= link_to "Запитання та відповіді", static_faq_path %></div>
 			<div class="list-group-item"><%= link_to "Контактна інформація", static_contacts_path %></div>
