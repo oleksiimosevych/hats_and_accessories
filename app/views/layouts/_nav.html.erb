@@ -5,8 +5,10 @@
 			<a href="#" class="list-group-item active">Топ продажу</a>
             <a href="#" class="list-group-item">Виробник: Україна</a>
             <p><br>Головні убори:</p>
+			<% @pages.each do |page| %><!--ТУТ МУСИТЬ БУТИ ІНША  ТАБЛИЦЯ! ТАБЛИЦЯ З ГРУПАМИ ТОВАРІВ!!!-->
+			<div class="list-group-item"><%=link_to page.name, page_path(page) %></div>
+			<% end %>
 			<a href="#" class="list-group-item">Весна 2016(в'язані шапочки)</a>
-            <a href="#" class="list-group-item">Весна 2016(трикотажні шапочки)</a>
             <a href="#" class="list-group-item">Шапки для молоді</a>
             <a href="#" class="list-group-item">Шапочки для дітей та підлітків</a>
             <a href="#" class="list-group-item">Шапочки для хлопчиків та дівчаток(зима 2016)</a>

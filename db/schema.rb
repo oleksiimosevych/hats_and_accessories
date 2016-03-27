@@ -11,6 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160327105809) do
+
+  create_table "pages", force: :cascade do |t|
+    t.string   "name",             limit: 255
+    t.text     "about",            limit: 65535
+    t.integer  "price",            limit: 4
+    t.integer  "group_name_id",    limit: 4
+    t.integer  "gender_id",        limit: 4
+    t.boolean  "the_best_of_week"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
 
 end

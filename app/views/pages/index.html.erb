@@ -1,0 +1,14 @@
+<h1>Усі товари <%= link_to 'Додати новий запис', new_page_path %></h1>
+  <% @pages.each do |page| %>
+<div class="col-xs-6 col-lg-4">
+  <h3><%=page.name %></h3>
+    <%= link_to 'Редагувати', edit_page_path(page) %>
+    <%= link_to 'Знищити запис', page_path(page), method: :delete, data: {confirm: 'Роксолано, ви впевнені, що бажаєте знищити цей запис?'} %>
+    <img width='250px' height='250px' src='../../assets/a.jpg' alt='Ваш браузер не підтримує картинки'/>
+    <p><%=page.price%> грн|<%=page.about %></p>
+    <p><%=link_to 'Детальніше', page_path(page) %> &raquo;</a>
+    
+    </p>
+</div><!--/.col-xs-6.col-lg-4-->
+<% end %>
+              	

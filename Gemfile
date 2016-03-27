@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 #YAML YAML Aint MarkupLang:)
 gem 'yaml_db'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -45,7 +44,12 @@ gem 'pry-byebug'
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
+  #try to use and to make selbst
+  gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
+  #for simle forms)
+  gem 'simple_form'
+###
+  
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end

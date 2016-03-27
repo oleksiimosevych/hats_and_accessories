@@ -1,0 +1,17 @@
+<%=simple_form_for(@page) do |f| %>
+  <%=f.input :name %>
+  <%=f.input :about, as: :text %>
+
+  <%=f.input :price %>
+  <%=f.input :group_name_id %>
+  <%=f.input :gender_id %>
+  
+
+
+
+  <%=f.input :the_best_of_week, as: :radio_buttons %>
+
+
+  <%=f.submit 'Save' %>
+
+<% end %>
