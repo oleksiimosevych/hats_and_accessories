@@ -1,0 +1,10 @@
+<h1><%= @goods_group.name %> <%= link_to 'Перейти до усіх записів', goods_groups_path %></h1>
+<div class="col-xs-6 col-lg-4">
+  <h3><%=@goods_group.name %></h3>
+    <%= link_to 'Редагувати', edit_goods_group_path(@goods_group) %>
+    <%= link_to 'Знищити запис', goods_group_path(@goods_group), method: :delete, data: {confirm: 'Роксолано, ви впевнені, що бажаєте знищити цей запис?'} %>
+    <img width='700px' height='700px' src='../../assets/a.jpg' alt='Ваш браузер не підтримує картинки'/>
+    <p><%=link_to 'Треба зробити кнопку ЗАМОВИТИ', goods_group_path(@goods_group) %>
+    </p>
+</div><!--/.col-xs-6.col-lg-4-->
+              	
