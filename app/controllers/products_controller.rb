@@ -41,16 +41,16 @@ class ProductsController < ApplicationController
 		else
 			redirect_to products_path, error: 'Не вдалося знищити запис...'
 		end
-	end
+	end    
 	def find_product
       #рубі знає що куди підставляти
 	  #але ми розказуємо йому що робити тут
 	  @product= Product.find(params[:id])
 	end
 	#here is the action show to show one of pages
-    def show
-    	
+    def show    	
     end
+    
   private #тільки для цього контроллера  
     def product_params# ми довіряємо таким полям, що в дужках
       params[:product].permit(:name, :about, :price, :group_name_id, :gender_id, :the_best_of_week)

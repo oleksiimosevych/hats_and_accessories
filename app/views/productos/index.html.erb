@@ -1,0 +1,10 @@
+<h1>Усі товари</h1>
+  <% @products.each do |product| %>
+<div class="col-xs-6 col-lg-4">
+  <h3><%=product.name %></h3>
+    <img width='250px' height='250px' src='../../assets/a.jpg' alt='Ваш браузер не підтримує картинки'/>
+    <p><%=product.price%> грн|<%=product.about %></p>
+    <p><%=link_to 'Детальніше', product_path(product) %> &raquo;</a></p>
+</div><!--/.col-xs-6.col-lg-4-->
+<% end %>
+              	

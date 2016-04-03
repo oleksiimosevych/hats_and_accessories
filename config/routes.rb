@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   #додали і тепер треба команду 
   #rake routes. DONE))
 resources :products
+resources :productos
 resources :goods_groups
 resources :genders
   # The priority is based upon order of creation: first created -> highest priority.
