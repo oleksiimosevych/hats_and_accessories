@@ -1,33 +1,25 @@
 class GoodsGroupsController < ApplicationController
-  #not-static pages:
 	#до виконання коду екшинів зробити:
 	before_filter :find_goods_group, only: [:edit, :update, :destroy]
-	#for creating new pages
-	def new
+	def new #for creating new pages
 		@goods_group = GoodsGroup.new
 	end
-	#to save new page
-	def create
+	def create #to make &save new page
 		@goods_group = GoodsGroup.new(goods_group_params)
-
 		if @goods_group.save
           redirect_to goods_groups_path
       else
       	render :new #simple form will light it as errors)
 		end
 	end
-	#to watch all the pages
-	def index
+	def index #to watch all the gg
 		@goods_group = GoodsGroup.all #беремо всі записи з бази
 	end
-	#to edit перенесли в файндпейдж
-	#і вона тепер буде виконуватися
 	def edit		
 	end
-	#to update a page
 	def update
-      #@page уже буде видно. бо той код 
-      #before_filter зробив це для нас)
+      #variablu @page уже буде видно. бо той код 
+      #before_filter from application_controller.rb зробив це для нас)
       if @goods_group.update(goods_group_params)
       	redirect_to goods_groups_path 
       else
@@ -43,8 +35,6 @@ class GoodsGroupsController < ApplicationController
 		end
 	end
 	def find_goods_group
-      #рубі знає що куди підставляти
-	  #але ми розказуємо йому що робити тут
 	  @goods_group = GoodsGroup.find(params[:id])
 	end
   private #тільки для цього контроллера  
