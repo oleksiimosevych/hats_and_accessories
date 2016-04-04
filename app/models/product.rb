@@ -6,4 +6,6 @@ class Product < ActiveRecord::Base
 	has_one :gender	
 	accepts_nested_attributes_for :goods_group
 	accepts_nested_attributes_for :gender
+	self.per_page = 3
+	WillPaginate.per_page = 3
 end
