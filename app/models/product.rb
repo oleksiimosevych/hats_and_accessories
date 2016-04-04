@@ -4,4 +4,6 @@ class Product < ActiveRecord::Base
 	validates :price, numericality: {greater_than_or_equal_to: 0.01}
 	has_one :goods_group
 	has_one :gender	
+	accepts_nested_attributes_for :goods_group
+	accepts_nested_attributes_for :gender
 end

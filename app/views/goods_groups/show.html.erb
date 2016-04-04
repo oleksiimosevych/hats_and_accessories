@@ -1,4 +1,4 @@
-<h1><%= @goods_groups.name %>
+<h1><%@goods_groups2= GoodsGroup.first.name%><%= @goods_groups2 %>
  <%= link_to 'Перейти до усіх записів', goods_groups_path %></h1>
 <div class="col-xs-6 col-lg-4">
     <%= link_to 'Редагувати', edit_goods_group_path(@goods_groups) %>
