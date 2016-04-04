@@ -1,6 +1,6 @@
 class GoodsGroupsController < ApplicationController
 	#до виконання коду екшинів зробити:
-	before_filter :find_goods_group, only: [:edit, :update, :destroy]
+	before_filter :find_goods_group, only: [:edit, :update, :show, :destroy]
 	def new #for creating new pages
 		@goods_group = GoodsGroup.new
 	end
