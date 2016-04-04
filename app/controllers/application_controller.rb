@@ -5,7 +5,8 @@ class ApplicationController < ActionController::Base
 #щоби змінна Пейджес була весь час під рукою
   before_filter :nav_menu
   def nav_menu
-  	@products = Product.all
+  	#@products = Product.all
+  	@products = Product.paginate(page: params[:page], per_page: 6) #беремо всі записи з бази	
   	@genders = Gender.all
   	@goods_groups = GoodsGroup.all
   end

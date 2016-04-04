@@ -1,9 +1,8 @@
 class ProductosController < ApplicationController
-	before_filter :find_product, only: [:show]
-	def index
-		@product = Product.all #беремо всі записи з бази
-	end
-	def find_product
-	  @product= Product.find(params[:id])
+	#before_filter :find_product, only: [:show, :index]
+	def index #to watch all the products
+		@products = Product.paginate(page: params[:page], per_page: 6) #беремо всі записи з бази
+		#@posts = Product.paginate(:page => params[:page], :per_page => 30)
+		#@posts = Product.order('created_at DESC').page(params[:page])
 	end
 end
