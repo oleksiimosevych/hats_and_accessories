@@ -8,4 +8,6 @@ class Product < ActiveRecord::Base
 	accepts_nested_attributes_for :gender
 	#self.per_page = 6
 	#WillPaginate.per_page = 6
+	#attr_accessible :image
+	mount_uploader :image, ImageUploader
 end

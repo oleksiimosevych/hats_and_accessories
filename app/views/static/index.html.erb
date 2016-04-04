@@ -4,40 +4,16 @@
       і дорослих. До вашої уваги Ми пропонуємо гігантський асортимент головних уборів від Українських та іноземних виробників за чудовими цінами! Новинки-перлинки у кожному сезоні гарантовано! Продаж лише ОПТОМ(у пачках). Мінімальна сума замовлення складає 500 грн.</p>
           </div>
 <div class="row">
-            <div class="col-xs-6 col-lg-4">
-              <h3>Шапка "клітинка"</h3>
-              <img width='250px' height='250px' src='../../assets/a.jpg' alt='Ваш браузер не підтримує картинки'/>
-			         <p>56 грн|В наявності|Тільки оптом|Д87</p>
-              <p><a class="btn btn-default" href="#" role="button">Детальніше &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4">
-              <h3>Шапка "червона а5"</h3>
-              <img width='250px' height='250px' src='../../assets/b.jpg' alt='Ваш браузер не підтримує картинки'/>
-			         <p>56 грн|В наявності|Тільки оптом|Д12</p>
-              <p><a class="btn btn-default" href="#" role="button">Детальніше &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4">
-              <h3>Шапка "сірий бонбон"</h3>
-              <img width='250px' height='250px' src='../../assets/c.jpg' alt='Ваш браузер не підтримує картинки'/>
-			        <p>56 грн|В наявності|Тільки оптом|Д12</p>
-              <p><a class="btn btn-default" href="#" role="button">Детальніше &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4">
-              <h3>Шапочка "бонбон а3"</h3>
-              <img width='250px' height='250px' src='../../assets/d.jpg' alt='Ваш браузер не підтримує картинки'/>
-			         <p>56 грн|В наявності|Тільки оптом|Д22</p>
-              <p><a class="btn btn-default" href="#" role="button">Детальніше &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4">
-              <h3>Шапочка "бонбон"</h3>
-              <img width='250px' height='250px' src='../../assets/e.jpg' alt='Ваш браузер не підтримує картинки'/>
-			         <p>56 грн|В наявності|Тільки оптом|Д43</p>
-              <p><a class="btn btn-default" href="#" role="button">Детальніше &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4">
-              <h3>Шапочка "KC"</h3>
-              <img width='250px' height='250px' src='../../assets/f.jpg' alt='Ваш браузер не підтримує картинки'/>
-      			  <p>56 грн|В наявності|Тільки оптом|Д12</p>
-              <p><a class="btn btn-default" href="#" role="button">Детальніше &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-          </div><!--/row-->
+            <% @products.each do |product| %>
+    <div class="col-xs-6 col-lg-4">
+      <h3><%=product.name %></h3>
+        <%= link_to 'Редагувати', edit_product_path(product) %>
+        <%= link_to 'Знищити запис', product_path(product), method: :delete, data: {confirm: 'Роксолано, ви впевнені, що бажаєте знищити цей запис?'} %>
+        <div> <%= image_tag(product.image_url, height: '250', width: '250') if product.image? %></div>
+        <p><%=product.price%> грн|<%=product.about %></p>
+        <p><%=link_to 'Детальніше...', product_path(product), class: "btn btn-default" %></a></p>
+    </div><!--/row-->
+    <% end %>
+    <%= render 'pagin' %>
+
+    </div>

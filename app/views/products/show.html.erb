@@ -1,7 +1,7 @@
-<h2><%= @product.name%> <%= link_to 'Перейти до усіх записів', products_path %></h2>
+<h2><%= link_to 'Перейти до усіх товарів', products_path %></h2>
 <div class="col-xs-6 col-lg-4">
   <h3><%=@product.name %></h3>
-    <img width='700px' height='700px' src='../../assets/a.jpg' alt='Ваш браузер не підтримує картинки'/>
+    <div> <%= image_tag(@product.image_url, width: '700') if @product.image? %></div>
     <p><%=@product.price%> грн|<%=@product.about %></p>
     <p><%=link_to 'Треба зробити кнопку ЗАМОВИТИ', product_path(@product) %>
     

@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'mini_magick'
 #YAML YAML Aint MarkupLang:)
 gem 'yaml_db'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -11,6 +12,8 @@ gem 'mysql2'
 #pagination)
 gem 'will_paginate', '~> 3.0.7'
 gem 'bootstrap-will_paginate', '~> 0.0.10'
+#for pictures
+gem 'carrierwave'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

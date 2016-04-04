@@ -6,7 +6,7 @@
             <a href="#" class="list-group-item">Виробник: Україна</a>
             <p><br>Головні убори:</p>
 			<% @goods_groups.each do |goods_group| %><!--ТУТ МУСИТЬ БУТИ ІНША  ТАБЛИЦЯ! ТАБЛИЦЯ З ГРУПАМИ ТОВАРІВ!!!-->
-			<div class="list-group-item"><%=link_to goods_group.name, goods_group_path(goods_group) %></div>
+			<a><%=link_to goods_group.name, goods_group_path(goods_group), class: "list-group-item" %></a>
 			<% end %>
             <br>
 			<div class="list-group-item"><%= link_to "Про компанію", static_about_path %></div>
