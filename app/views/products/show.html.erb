@@ -2,9 +2,7 @@
 <div class="col-xs-6 col-lg-4">
   <h3><%=@product.name %></h3>
     <div> <%= image_tag(@product.image_url, width: '700') if @product.image? %></div>
-    <p><%=@product.price%> грн|<%=@product.about %></p>
-    <p><%=link_to 'Треба зробити кнопку ЗАМОВИТИ', product_path(@product) %>
-    
-    </p>
+    <h4><%=@product.price%> грн|<%=@product.about %></h4>
+    <h2><p><%=link_to 'Замовити', product_path(@product), class: "btn btn-default" %></h2>
 </div><!--/.col-xs-6.col-lg-4-->
               	

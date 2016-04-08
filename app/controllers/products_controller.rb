@@ -2,7 +2,6 @@ class ProductsController < ApplicationController
 	before_filter :find_product, only: [:edit, :update, :show, :destroy] #do before actions
 	def new #for creating new pages
 		@product = Product.new
-		###
 		#@product.image = params[:file] 
 		@goods_groups = GoodsGroup.all
 		@genders = Gender.all
@@ -18,8 +17,7 @@ class ProductsController < ApplicationController
 	end
 	def index #to watch all the products
 		@products = Product.paginate(page: params[:page], per_page: 6) #беремо всі записи з бази
-		#@posts = Product.paginate(:page => params[:page], :per_page => 30)
-		#@posts = Product.order('created_at DESC').page(params[:page])
+		#@posts = Product.paginate(:page => params[:page], :per_page => 30)#@posts = Product.order('created_at DESC').page(params[:page])
 	end
 	def edit		
 	end
