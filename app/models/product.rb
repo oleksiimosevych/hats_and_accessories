@@ -10,4 +10,12 @@ class Product < ActiveRecord::Base
 	#WillPaginate.per_page = 6
 	#attr_accessible :image
 	mount_uploader :image, ImageUploader
+#search in producTS
+	def self.search(search)
+		if search
+			where('name LIKE ?', "%#{search}%")
+		else
+			all
+		end
+	end
 end

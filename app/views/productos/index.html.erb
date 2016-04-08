@@ -1,4 +1,12 @@
 <h1>Усі товари</h1>
+
+<%= form_tag productos_path, :method=> 'get' do%>
+<p>
+	<%= text_field_tag :search, params[:search]%>
+	<%= submit_tag "Search", :name =>nil%>
+</p>
+<%end%>
+
   <% @products.each do |product| %>
 <div class="col-xs-6 col-lg-4">
   <h3><%=product.name %></h3>

@@ -9,6 +9,8 @@ gem 'rails', '4.2.6'
 gem 'sqlite3'
 #you know it is MySQL connection 
 gem 'mysql2'
+#JQ added here 08 04 2016
+gem 'jquery-rails'
 #pagination)
 gem 'will_paginate', '~> 3.0.7'
 gem 'bootstrap-will_paginate', '~> 0.0.10'

@@ -45,7 +45,7 @@ class ProductsController < ApplicationController
     end    
    	def authenticate
   		authenticate_or_request_with_http_basic do |username, password|
-  		username == "root" && password == "admin3"
+  		username == "root" && password == "admin2"
 		end
 	end
 private #тільки для цього контроллера  
