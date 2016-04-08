@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
+	before_filter :authenticate, only: [:index,:new,:edit, :update,:destroy]
 	before_filter :find_product, only: [:edit, :update, :show, :destroy] #do before actions
+
 	def new #for creating new pages
 		@product = Product.new
 		#@product.image = params[:file] 
@@ -41,7 +43,12 @@ class ProductsController < ApplicationController
 	#here is the action show to show one of pages
     def show    	
     end    
-  private #тільки для цього контроллера  
+   	def authenticate
+  		authenticate_or_request_with_http_basic do |username, password|
+  		username == "root" && password == "admin3"
+		end
+	end
+private #тільки для цього контроллера  
     def product_params# ми довіряємо таким полям, що в дужках
       params[:product].permit(:name, :about, :price, :group_name_id, :gender_id, :the_best_of_week, :goods_group_id, :image)
     end
