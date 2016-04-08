@@ -1,5 +1,6 @@
 class GoodsGroupsController < ApplicationController
 	#до виконання коду екшинів зробити:
+require 'will_paginate/array' 
 	before_filter :find_goods_group, only: [:edit, :update, :show, :destroy]
 	def new #for creating new pages
 		@goods_group = GoodsGroup.new
@@ -13,7 +14,12 @@ class GoodsGroupsController < ApplicationController
 		end
 	end
 	def index #to watch all the gg
-		@goods_group = GoodsGroup.all #беремо всі записи з бази
+		@goods_group = GoodsGroup.all #беремо всі записи з бази		
+		@products = Product.paginate(page: params[:page], per_page: 6) #беремо всі записи з бази
+	end
+	def show
+		#Product.where("goods_group_id =?", params[:id])
+		#@products = @products.paginate(page: params[:page], per_page: 6) #беремо всі записи з бази
 	end
 	def edit		
 	end
