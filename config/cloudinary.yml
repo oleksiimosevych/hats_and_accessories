@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: r-a
+  api_key: '755829349999829'
+  api_secret: lu24rsppIX_daWi9XLsKWX0YDa4
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: r-a
+  api_key: '755829349999829'
+  api_secret: lu24rsppIX_daWi9XLsKWX0YDa4
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: r-a
+  api_key: '755829349999829'
+  api_secret: lu24rsppIX_daWi9XLsKWX0YDa4
+  enhance_image_tag: true
+  static_image_support: false
