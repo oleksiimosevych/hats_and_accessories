@@ -18,7 +18,7 @@ require 'will_paginate/array'
 		@products = Product.paginate(page: params[:page], per_page: 6) #беремо всі записи з бази
 	end
 	def show
-		#Product.where("goods_group_id =?", params[:id])
+		#по однійц картинці Product.where("goods_group_id =?", params[:id])
 		#@products = @products.paginate(page: params[:page], per_page: 6) #беремо всі записи з бази
 	end
 	def edit		

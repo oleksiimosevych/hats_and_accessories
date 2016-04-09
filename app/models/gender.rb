@@ -1,5 +1,5 @@
 class Gender < ActiveRecord::Base
-  validates :gender_name, presence: true
-  validates :gender_name, uniqueness: true
+  validates :name, presence: true
+  validates :name, uniqueness: true
   belongs_to :product
 end

@@ -38,6 +38,6 @@ class GendersController < ApplicationController
 	end
   private #тільки для цього контроллера  
     def gender_params# ми довіряємо таким полям, що в дужках
-      params[:gender].permit(:gender_name)
+      params[:gender].permit(:name)
     end
 end
