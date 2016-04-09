@@ -1,5 +1,5 @@
 <h2><%= @goods_group.name %></h2>
-<% @products=Product.where("goods_group_id =?", params[:id])%>
+<% @products=Product.where("goods_group_id =?", params[:id]).paginate(page: params[:page], per_page: 6) %>
   <% @products.each do |product| %>
 <div class="col-xs-6 col-lg-4">
   <h3><%=product.name %></h3>
@@ -9,4 +9,4 @@
 </div><!--/.col-xs-6.col-lg-4-->
 <% end %>
  <!--WARNING! PAGINATION!!!PAGINATION!!!PAGINATION!!!PAGINATION!!!PAGINATION!!!-->
-<%#= render 'pagin' %>
+<%= render 'pagin' %>
