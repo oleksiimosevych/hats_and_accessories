@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
           </button>
 		  <a href=""><img class="navbar-brand" src='../../assets/KR.png'/></a>
-          <div class="navbar-brand" ><%= link_to "Koblyk Roksolana", root_path %></div>
+          <div class="navbar-brand" ><%= link_to "R&A", root_path %></div>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -17,6 +17,7 @@
             <li class="<%= 'active' if current_page?(static_about_path) %>"><%= link_to "Про компанію", static_about_path %></li>
       			<li class="<%= 'active' if current_page?(static_contacts_path) %>"><%= link_to "Контактна інформація", static_contacts_path %></li>
             <li class="<%= 'active' if current_page?(static_delivery_path) %>"><%= link_to "Доставка і оплата", static_delivery_path %></li>
+            <li><%= link_to 'Увійти', products_path %></li>
           </ul>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
