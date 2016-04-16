@@ -39,7 +39,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #Halleluja! Ce dopomohlo[ua] It helped)
 #gem 'therubyracer','~> 0.12.2' #added the version of rr
 #tut she kod[ua]
-gem 'nodejs-rails', '~> 0.0.1' #added statt rubyRacer
+#gem 'nodejs-rails', '~> 0.0.1' #added statt rubyRacer
 
 gem "twitter-bootstrap-rails"
 
