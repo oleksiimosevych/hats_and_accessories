@@ -6,6 +6,9 @@
   <%=f.input :goods_group_id, collection: @goods_groups %>
   <%=f.input :gender_id, collection: @genders %>
   <%=f.input :the_best_of_week, as: :radio_buttons %>
+  <%=f.input :wholesale, as: :radio_buttons %>
+  <%=f.input :avaible, as: :radio_buttons %>
+  
   <div width = "130px">  <%= image_tag(@product.image_url, width: '500') if @product.image? %>
     <%= f.file_field :image, width: '100' %>
     <%= f.hidden_field :image_cache , width: '100'%>

@@ -4,3 +4,11 @@
 	height: auto;
 	height: 160px;
 }
+
+.about_img {
+	width: auto;
+	max-height: 300px;
+	height: 300px;
+}
+.red{color:red;}
+.green{color:green;}

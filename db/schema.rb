@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160404183759) do
+ActiveRecord::Schema.define(version: 20160430190443) do
 
   create_table "genders", force: :cascade do |t|
     t.string   "name",       limit: 255, default: "", null: false
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 20160404183759) do
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
     t.string   "image",            limit: 255
+    t.boolean  "wholesale"
+    t.boolean  "avaible"
   end
 
 end

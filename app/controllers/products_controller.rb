@@ -50,6 +50,6 @@ class ProductsController < ApplicationController
 	end
 private #тільки для цього контроллера  
     def product_params# ми довіряємо таким полям, що в дужках
-      params[:product].permit(:name, :about, :price, :group_name_id, :gender_id, :the_best_of_week, :goods_group_id, :image)
+      params[:product].permit(:name, :about, :price, :group_name_id, :gender_id, :the_best_of_week, :goods_group_id, :image, :avaible,:wholesale)
     end
 end

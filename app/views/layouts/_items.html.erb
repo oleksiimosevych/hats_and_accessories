@@ -9,8 +9,23 @@
             </div>
             <div class="panel-body text-center">
               <%= image_tag(product.image_url, class: "cap_img img-rounded") %>
-              <p class="m-b"> <%=product.price%> грн.
+              <p class="m-b"> <b><%=product.price%></b> грн.
               	<br>
+                <p><small>
+                  <% if product.avaible %>
+                      <span class='green'>В наявності</span>
+                  <% else%>
+                      <span class='red'>Нема в наявності</span>
+                  <%end%>
+                  <br>
+                  <% if product.wholesale %>
+                      Тільки оптом
+                  <% else%>
+                      Доступно вроздріб
+                  <% end %>
+                </small></p>
+
+
               	<%= link_to "Детальніше...", product_path(product) , class: 'btn btn-primary-outline btn-sm m-b'%>
               </p>
             </div>
