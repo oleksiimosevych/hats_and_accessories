@@ -7,8 +7,6 @@ gem 'yaml_db'
 gem 'rails', '4.2.6'
 #you know it is MySQL connection 
 gem 'mysql2'
-#JQ added here 08 04 2016
-gem 'jquery-rails'
 #pagination)
 gem 'will_paginate', '~> 3.0.7'
 gem 'bootstrap-will_paginate', '~> 0.0.10'
@@ -43,7 +41,9 @@ gem "twitter-bootstrap-rails"
  gem 'simple_form'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+group :production do
+	gem 'pg'
+end
 # Use Unicorn as the app server
 # gem 'unicorn'
 

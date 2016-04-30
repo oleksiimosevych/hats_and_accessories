@@ -132,6 +132,7 @@ GEM
     netrc (0.11.0)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    pg (0.18.4)
     posix-spawn (0.3.11)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -253,6 +254,7 @@ DEPENDENCIES
   jquery-rails
   mini_magick
   mysql2
+  pg
   pry-byebug
   rails (= 4.2.6)
   sass-rails (~> 5.0)
