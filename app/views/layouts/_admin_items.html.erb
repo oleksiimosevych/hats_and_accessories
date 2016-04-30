@@ -1,3 +1,12 @@
+<div class="jumbotron">
+	<h2>Адмін-панель 
+		<%= link_to 'Додати новий запис', new_product_path %>
+	</h2>
+	<h3>
+		<%= link_to 'Додати нову групу товарів', new_goods_group_path %>
+		<%= link_to 'Додати новий тип товарів', new_gender_path %>
+	</h3>
+</div>
 <div class="row row-padded row-bordered row-centered">
     <div class="col-sm-12">
       <div class="row">
@@ -5,7 +14,9 @@
         <div class="col-md-3 m-b-lg">
           <div class="panel panel-default panel-profile m-b-0">
             <div class="panel-heading">
-               	<h4 class="panel-title  text-center"><%=product.name %></h4>
+            	<h4 class="panel-title  text-center"><%=product.name %></h4>
+            	<%= link_to 'Редагувати', edit_product_path(product) %>
+    			<%= link_to 'Знищити запис', product_path(product), method: :delete, data: {confirm: 'Адміністраторе, ви впевнені, що бажаєте знищити цей запис?'} %>
             </div>
             <div class="panel-body text-center">
               <%= image_tag(product.image_url, class: "cap_img img-rounded") %>
