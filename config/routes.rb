@@ -1,13 +1,28 @@
 Rails.application.routes.draw do
-  get 'say/hello'
-
-  get 'say/goodbye'
-
+  
+  # цікаво якщо я їх закоментую воно буде працювати норм?)get 'say/hello'
+  #get 'say/goodbye'
+  
+  #додаємо тут роути для статичних сторінок
+  get 'static/index'
+  get 'static/about'
+  get 'static/contacts'
+  get 'static/delivery'
+  #FAQ and reciewed messages
+  get 'static/faq'
+  #get 'say/review'
+  #додали і тепер треба команду 
+  #rake routes. DONE))
+resources :products
+resources :productos
+resources :goods_groups
+resources :genders
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  #ми створили 1 контроллер static, який назвало say_controller, але у нього - це таке як суфікс _controller. У ньому є 5 методів(екшенів). Тут ми його даємо в корінь
+ #робимо індекс екшн дефолтним
+  root 'static#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

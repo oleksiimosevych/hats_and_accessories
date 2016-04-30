@@ -1,0 +1,14 @@
+<%=simple_form_for @product, :html => {:multipart => true} do |f| %>
+  <%= f.error_notification%>
+  <%=f.input :name %>
+  <%=f.input :about, as: :text %>
+  <%=f.input :price %>
+  <%=f.input :goods_group_id, collection: @goods_groups %>
+  <%=f.input :gender_id, collection: @genders %>
+  <%=f.input :the_best_of_week, as: :radio_buttons %>
+  <div width = "130px">  <%= image_tag(@product.image_url, width: '500') if @product.image? %>
+    <%= f.file_field :image, width: '100' %>
+    <%= f.hidden_field :image_cache , width: '100'%>
+</div>
+  <%=f.submit 'Save' %>
+<% end %>

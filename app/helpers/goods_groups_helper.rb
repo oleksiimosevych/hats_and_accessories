@@ -1,0 +1,2 @@
+module GoodsGroupsHelper
+end

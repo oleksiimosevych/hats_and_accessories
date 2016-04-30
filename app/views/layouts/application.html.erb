@@ -8,10 +8,7 @@
   <%= csrf_meta_tags %>
   <%= render :partial => 'layouts/header' %>
 </head>
-  
-
   <body>
-
     <!--require MENU-->
     <%= render :partial => 'layouts/upmenu' %>
     <div class="container">
@@ -26,17 +23,14 @@
           <!--req products-->
           <%= yield %>
         </div><!--/.col-xs-12.col-sm-9-->
-
       <!--req NAV-->
    		<%= render :partial => 'layouts/nav' %>
           </div>
         </div><!--/.sidebar-offcanvas-->
       </div><!--/row-->
-
     <!--req FOOTER-->
 	<%= render :partial => 'layouts/footer' %>	
     </div><!--/.container-->
-
 <!--req links-->
    <%= render :partial => 'layouts/links' %>
   </body>

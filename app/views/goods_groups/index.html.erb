@@ -1,0 +1,9 @@
+<h1>Усі групи товарів <%= link_to 'Додати нову групу', new_goods_group_path %></h1>
+  <% @goods_groups.each do |goods_group| %>
+<h3>
+  <h3><%=goods_group.name %></h3>
+  
+    <%= link_to 'Редагувати', edit_goods_group_path(goods_group) %>
+    <%= link_to 'Знищити запис', goods_group_path(goods_group), method: :delete, data: {confirm: "Адміністраторе, ви впевнені, що бажаєте знищити групу товарів #{goods_group.name}?"} %>
+</h3><!--/.col-xs-6.col-lg-4-->
+<% end %>
