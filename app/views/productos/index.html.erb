@@ -1,3 +1,7 @@
 <h1>Усі товари</h1>
-<%= render 'layouts/items' %>
+<% if @products.empty? %>
+	<p>В данній категорії товарів не знайдено</p>
+<% else %>
+	<%= render 'layouts/items' %>
+<% end %>
 <%= render 'pagin' %>

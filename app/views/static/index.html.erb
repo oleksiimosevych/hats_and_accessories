@@ -1,4 +1,7 @@
 <div class="row">
-  <%= render 'layouts/items' %>
-  <%= render 'pagin' %>
+<% if @products.empty? %>
+	<p>В данній категорії товарів не знайдено</p>
+<% else %>
+	<%= render 'layouts/items' %>
+<% end %>  <%= render 'pagin' %>
 </div>
