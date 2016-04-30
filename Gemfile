@@ -40,7 +40,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #gem 'nodejs-rails', '~> 0.0.1' #added statt rubyRacer
 
 gem "twitter-bootstrap-rails"
-
+ gem 'simple_form'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -57,7 +57,7 @@ group :development do
   #try to use and to make selbst
   gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
   #for simle forms)
-  gem 'simple_form'
+ 
 ###
   
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
