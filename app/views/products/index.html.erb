@@ -5,7 +5,7 @@
   <h3><%=product.name %></h3>
     <%= link_to 'Редагувати', edit_product_path(product) %>
     <%= link_to 'Знищити запис', product_path(product), method: :delete, data: {confirm: 'Адміністраторе, ви впевнені, що бажаєте знищити цей запис?'} %>
-    <div> <%= image_tag(product.image_url, height: '250', width: '275') if product.image? %></div>
+    <div> <%= image_tag(product.image_url, height: 'auto', width: '275', class: "img-rounded") %></div>
     <p><%=product.price%> грн|<%=product.about %></p>
     <p><%=link_to 'Детальніше...', product_path(product), class: "btn btn-default" %></a></p>
 </div><!--/.col-xs-6.col-lg-4-->

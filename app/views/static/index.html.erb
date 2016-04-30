@@ -1,16 +1,4 @@
-<div class="jumbotron">
-            <h2>Купуйте шапочки!</h2>
-            <p>Ми уже декілька років працюємо для Вас: знаходимо найкращі товари та надаємо Вам змогу купити їх у нас. Замовляйте шапочки для дітей
-      і дорослих. До вашої уваги Ми пропонуємо гігантський асортимент головних уборів від Українських та іноземних виробників за чудовими цінами! Новинки-перлинки у кожному сезоні гарантовано! Продаж лише ОПТОМ(у пачках). Мінімальна сума замовлення складає 500 грн.</p>
-          </div>
 <div class="row">
-            <% @products.each do |product| %>
-    <div class="col-xs-6 col-lg-4">
-      <h3><%=product.name %></h3>
-        <div> <%= image_tag(product.image_url, height: '250', width: '275') if product.image? %></div>
-        <p><%=product.price%> грн|<%=product.about %></p>
-        <p><%=link_to 'Детальніше...', product_path(product), class: "btn btn-default" %></a></p>
-    </div><!--/row-->
-    <% end %>
-    <%= render 'pagin' %>
-    </div>
+  <%= render 'layouts/items' %>
+  <%= render 'pagin' %>
+</div>

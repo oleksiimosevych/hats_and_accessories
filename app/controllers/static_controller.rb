@@ -1,8 +1,8 @@
 class StaticController < ApplicationController #Ми створили нові ЕКШЕНИ!!! для статичних сторінок
   def index
     #what is wrong here? must display the best of week goods!
-    @static=Product.where("the_best_of_week =true")
-    @static = @static.paginate(page: params[:page], per_page: 6)
+    @static=Product.where(the_best_of_week: true)
+    @static = @static.paginate(page: params[:page], per_page: 12)
   end
   def about
   end

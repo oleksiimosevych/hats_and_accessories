@@ -15,11 +15,12 @@ require 'will_paginate/array'
 	end
 	def index #to watch all the gg
 		@goods_group = GoodsGroup.all #беремо всі записи з бази		
-		@products = Product.paginate(page: params[:page], per_page: 6) #беремо всі записи з бази
+		@products = Product.paginate(page: params[:page], per_page: 12) #беремо всі записи з бази
 	end
 	def show
 		#по однійц картинці Product.where("goods_group_id =?", params[:id])
 		#@products = @products.paginate(page: params[:page], per_page: 6) #беремо всі записи з бази
+		@products=Product.where("goods_group_id =?", params[:id]).paginate(page: params[:page], per_page: 12)
 	end
 	def edit		
 	end
