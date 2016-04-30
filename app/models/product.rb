@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-	validates :name, :about, :price, :avaible, :wholesale, :the_best_of_week, :goods_group_id, :gender_id, presence: true
+	validates :name, :about, :price, :goods_group_id, :gender_id, presence: true
 	validates :name, uniqueness: true
 	validates :price, numericality: {greater_than_or_equal_to: 0.01}
 	has_one :goods_group
