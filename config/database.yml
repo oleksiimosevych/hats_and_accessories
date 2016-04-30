@@ -4,10 +4,6 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 #
-default: &default
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
 
 development:
   adapter: mysql2
@@ -29,13 +25,9 @@ test:
   #socket: **/opt/local/var/run/mysql5/mysqld.sock**
 
 production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
+  adapter: postgresql
   database: web_store_production
-  pool: 5
-  username: root
-  password: Ass222Ass222
+
   #socket: **/opt/local/var/run/mysql5/mysqld.sock**
   #rake db:create to cmd
 #more help for converting from sqlite to mysql)))  http://stackoverflow.com/questions/1670154/convert-a-ruby-on-rails-app-from-sqlite-to-mysql
