@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
 		end
 	end
 	def index #to watch all the products
-		@products = Product.paginate(page: params[:page], per_page: 12) #беремо всі записи з бази
+		@products = Product.paginate(page: params[:page], per_page: 12).search(params[:search]) #беремо всі записи з бази
 		#@posts = Product.paginate(:page => params[:page], :per_page => 30)#@posts = Product.order('created_at DESC').page(params[:page])
 	end
 	def edit		

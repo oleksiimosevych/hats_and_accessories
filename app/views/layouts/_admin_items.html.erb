@@ -1,5 +1,17 @@
 <div class="jumbotron">
 	<h2>Адмін-панель 
+  Адмін-пошук: 
+
+  <p>Пошук по усіх товарах</p>
+      <%= form_tag products_path, :method=> 'get' do%>
+      
+      <p>
+      <%= text_field_tag :search, params[:search]%>
+      <%= submit_tag "Search", :name =>nil%>
+      </p>
+      <%end%>
+
+
 		<%= link_to 'Додати новий запис', new_product_path %>
 	</h2>
 	<h3>

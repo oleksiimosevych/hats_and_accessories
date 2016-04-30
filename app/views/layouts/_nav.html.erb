@@ -3,7 +3,8 @@
 			<h1>+380938782776</h1>
 
 			<p>Пошук по усіх товарах</p>
-			<%= form_tag productos_path, :method=> 'get' do%>
+			<%= form_tag root_path, :method=> 'get' do%>
+			
 			<p>
 			<%= text_field_tag :search, params[:search]%>
 			<%= submit_tag "Search", :name =>nil%>
