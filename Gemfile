@@ -5,8 +5,6 @@ gem 'mini_magick'
 gem 'yaml_db'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 #you know it is MySQL connection 
 gem 'mysql2'
 #JQ added here 08 04 2016
