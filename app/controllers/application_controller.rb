@@ -10,4 +10,18 @@ class ApplicationController < ActionController::Base
   	@genders = Gender.all
   	@goods_groups = GoodsGroup.all
   end
+
+  def add_to_cart
+    @cart.add(product, product.price, quantity)
+  end
+  def rm_from_cart
+    @cart.remove(product, quantity)
+  end
+
+  def authenticate
+      authenticate_or_request_with_http_basic do |username, password|
+      username == "mosevich@mail.ua" && password == "kk3801108ad"
+    end
+  end
+
 end

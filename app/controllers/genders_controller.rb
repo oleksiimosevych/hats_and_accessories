@@ -1,6 +1,9 @@
 class GendersController < ApplicationController
 	#not-static pages:#до виконання коду екшинів зробити:
-	before_filter :find_gender, only: [:edit, :update, :destroy]
+	before_action :find_gender, only: [:edit, :update, :destroy]
+	before_action :authenticate, only: [:index, :edit, :update, :destroy]
+	
+	 #before_action :zzz, :only => [:index]
 	def new #for creating new pages
 		@gender = Gender.new
 	end

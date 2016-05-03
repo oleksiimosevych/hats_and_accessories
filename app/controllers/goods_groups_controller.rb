@@ -1,7 +1,10 @@
 class GoodsGroupsController < ApplicationController
 	#до виконання коду екшинів зробити:
 require 'will_paginate/array' 
-	before_filter :find_goods_group, only: [:edit, :update, :show, :destroy]
+	before_action :find_goods_group, only: [:edit, :update, :show, :destroy]
+	#дія що відбувається до того як завантажиться сторінка 
+	before_action :authenticate, only: [:index, :edit, :update, :destroy]
+	#before_action :zzz, :only => [:index]
 	def new #for creating new pages
 		@goods_group = GoodsGroup.new
 	end

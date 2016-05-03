@@ -36,6 +36,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #gem 'therubyracer','~> 0.12.2' #added the version of rr
 #tut she kod[ua]
 #gem 'nodejs-rails', '~> 0.0.1' #added statt rubyRacer
+#
+gem 'acts_as_shopping_cart', '~> 0.2.1'
+#
 
 gem "twitter-bootstrap-rails"
  gem 'simple_form'
