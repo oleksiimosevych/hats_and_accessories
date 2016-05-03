@@ -12,3 +12,16 @@
 }
 .red{color:red;}
 .green{color:green;}
+
+.productname{
+	height: 25px;
+	 vertical-align: middle;
+}
+
+.justi{
+	text-align: justify;
+}
+.question_faq{
+	font-size:20px;
+	margin-bottom:20px;
+}
