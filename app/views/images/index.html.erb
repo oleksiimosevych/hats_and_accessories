@@ -1,0 +1,9 @@
+<h1>Усі картинки <%= link_to 'Додати нову картинку', new_image_path %></h1>
+  <% @images.each do |image| %>
+<h3>
+  <h3><%=image.file %></h3>
+  
+    <%= link_to 'Редагувати', edit_image_path(image) %>
+    <%= link_to 'Видалити картинку', image_path(image), method: :delete, data: {confirm: "Адміністраторе, ви впевнені, що бажаєте Видалити картинку #{image.file}?"} %>
+</h3><!--/.col-xs-6.col-lg-4-->
+<% end %>
