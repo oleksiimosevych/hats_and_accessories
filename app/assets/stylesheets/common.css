@@ -1,0 +1,27 @@
+.cap_img {
+	width: auto;
+	max-width: 160px;
+	height: auto;
+	height: 160px;
+}
+
+.about_img {
+	width: auto;
+	max-height: 300px;
+	height: 300px;
+}
+.red{color:red;}
+.green{color:green;}
+
+.productname{
+	height: 25px;
+	 vertical-align: middle;
+}
+
+.justi{
+	text-align: justify;
+}
+.question_faq{
+	font-size:20px;
+	margin-bottom:20px;
+}

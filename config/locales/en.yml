@@ -20,4 +20,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  will_paginate:
+    page_entries_info:
+      single_page:
+        zero:  "Нічого нe знайдено"
+        one:   "Знайдено 1 запис"
+        other: "Знайдено записів: %{count}"
+      single_page_html:
+        zero:  "Нічого нe знайдено"
+        one:   "Знайдено <b>1</b> запис"
+        other: "Знайдено записів: <b>&nbsp;%{count}</b> "
+
+      multi_page: "Знайдено записи від %{from} - до %{to} з %{count} "
+      multi_page_html: "Знайдено записи <b>від %{from}&nbsp;-&nbsp; до %{to}</b> з <b>%{count}</b> "

@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="span2">
+  </div>
+  <div class="span10">
+    <h1><%= @product.name ? "Edit - #{@products.name}" : "New page" %></h1>
+    <%= form_for @product do |f| %>
+    <%= f.label :name, "Page title:" %>
+    <%= f.text_field :name, :class => "span8" %>
+    <%= f.label :about, "Body text:" %>
+    <%= f.text_area :about, :class => "span8" %>
+    <span class="help-block">Enter body text in <a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a> format</span>
+    <hr/>
+    <ul class="thumbnails">
+      <%= f.fields_for :images, @product.images do |images_field| %>
+      <% if images_field.object.new_record? %>
+      <li id="<%= images_field.object_name.gsub(/[^0-9]+/,'') %>" class="span4">
+        <%= images_field.label :file, "Image:" %>
+        <%= images_field.file_field :file %>
+      </li>
+      <% else %>
+      <li id="<%= images_field.object_name.gsub(/[^0-9]+/,'') %>" class="span2">
+        <div class="thumbnail">
+          <%= image_tag(images_field.object.file.url(:thumb)) %>
+          <div class="caption">
+            <%= images_field.check_box :_destroy %>
+            <%= images_field.label(:_destroy, "Delete image", :class => "checkbox inline") %>
+          </div>
+        </div>
+      </li>
+      <% end %>
+      <% end %>
+    </ul>
+    <span class="help-block">When one image is added it will be shown on the left of the body text, when more are added it will create a slideshow.</span>
+    <div class="form-actions">
+      <%= f.submit "Save", :class => "btn btn-primary" %>
+    </div>
+    <% end %>
+  </div>
+</div>

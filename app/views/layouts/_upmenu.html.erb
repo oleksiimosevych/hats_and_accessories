@@ -2,21 +2,22 @@
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
+            <span class="sr-only">Навігація</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-		  <a href="index.html"><img class="navbar-brand" src='../../assets/KR.png'/></a>
-          <a class="navbar-brand" href="index.html">Koblyk Roksolana</a>
+		  <a href="<%= root_path%>"><img class="navbar-brand" src="<%= image_path('KR.png') %>"/></a>
+          <div class="navbar-brand" ><%= link_to "R&A", root_path %></div>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="index.html">Головна</a></li>
-            <li class="active"><a href="headwears.html">Головні убори</a></li>
-            <li><a href="about.html">Про компанію</a></li>
-			<li><a href="contact.html">Контактна інформація</a></li>
-            <li><a href="howtobook.html">Доставка і оплата</a></li>
+            <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Головна", root_path %></li>
+            <li class="<%= 'active' if current_page?(static_about_path) %>"><%= link_to "Про компанію", static_about_path %></li>
+      			
+            <li class="<%= 'active' if current_page?(static_delivery_path) %>"><%= link_to "Доставка і оплата", static_delivery_path %></li>
+            <li class="<%= 'active' if current_page?(static_faq_path) %>"><%= link_to "Запитання та відповіді", static_faq_path %></li>
+            <li><%= link_to 'Увійти', products_path %></li>
           </ul>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
