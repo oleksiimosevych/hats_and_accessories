@@ -2,7 +2,7 @@
 	width: auto;
 	max-width: 150px;
 	height: auto;
-	height: 160px;
+	height: 150px;
 }
 
 .about_img {
@@ -28,4 +28,8 @@
 .stable_position{
 	margin:0px;
 	padding:0px;	
+}
+.right_side{
+	float: left;
+	clear:both;
 }
