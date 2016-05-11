@@ -1,26 +1,33 @@
 <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
           <div class="list-group">
 			<h1>+380938782776</h1>
-			<p>Пошук по сайту</p>
-			<a href="#" class="list-group-item active">Топ продажу</a>
-            <a href="#" class="list-group-item">Виробник: Україна</a>
-            <p><br>Головні убори:</p>
-			<a href="#" class="list-group-item">Весна 2016(в'язані шапочки)</a>
-            <a href="#" class="list-group-item">Весна 2016(трикотажні шапочки)</a>
-            <a href="#" class="list-group-item">Шапки для молоді</a>
-            <a href="#" class="list-group-item">Шапочки для дітей та підлітків</a>
-            <a href="#" class="list-group-item">Шапочки для хлопчиків та дівчаток(зима 2016)</a>
-            <a href="#" class="list-group-item">Шапки Чоловічі</a>
-            <a href="#" class="list-group-item">Шапки Жіночі</a>
-            <a href="#" class="list-group-item">Шарфи</a>
-			<br>
-			<div class="list-group-item"><%= link_to "Про компанію", static_about_path %></div>
-			<div class="list-group-item"><%= link_to "Запитання та відповіді", static_faq_path %></div>
-			<div class="list-group-item"><%= link_to "Контактна інформація", static_contacts_path %></div>
-			<p>Телефон: 0938782776<br>
-			Представник: Роксолана<br>
-			E-mail: mosevich@mail.ru<br>
-			<a href='#'>Графік роботи</a>
+
+			<p>Пошук по усіх товарах</p>
+			<%= form_tag root_path, :method=> 'get' do%>
+			
+			<p>
+			<%= text_field_tag :search, params[:search]%>
+			<%= submit_tag "Пошук", :name =>nil%>
 			</p>
+			<%end%>
+            <p><br>Знижки та акції:</p>
+            <a href="<%= productos_path %>" class="list-group-item <%= 'active' if current_page?(productos_path) %>">Товари тижня</a>
+
+			<p><br>Оберіть категорію:</p>
+            <% @goods_groups.each do |goods_group| %><!--ТУТ МУСИТЬ БУТИ ІНША  ТАБЛИЦЯ! ТАБЛИЦЯ З ГРУПАМИ ТОВАРІВ!!!-->
+			<a><%=link_to goods_group.name, goods_group_path(goods_group), class: "list-group-item #{"list-group-item active" if current_page?(goods_group_path(goods_group))}"%></a>
+			<% end %>
+            <hr>
+            <address>
+  				<strong>R&A  Internet-shop</strong><br>
+  				<abbr title="Телефон">Телефон:</abbr> +380938782776
+			</address>
+
+			<address>
+  				<strong>Роксолана</strong><br>
+  				<a href="mailto:mosevich@mail.ua#">mosevich@mail.ua</a>
+			</address>
+
           </div>
         </div><!--/.sidebar-offcanvas-->
+        

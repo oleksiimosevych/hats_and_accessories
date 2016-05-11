@@ -11,6 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160504134330) do
+
+  create_table "cart_items", force: :cascade do |t|
+    t.integer "owner_id",   limit: 4
+    t.string  "owner_type", limit: 255
+    t.integer "quantity",   limit: 4
+    t.integer "item_id",    limit: 4
+    t.string  "item_type",  limit: 255
+    t.float   "price",      limit: 24
+  end
+
+  create_table "genders", force: :cascade do |t|
+    t.string   "name",       limit: 255, default: "", null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+  end
+
+  create_table "goods_groups", force: :cascade do |t|
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "name",       limit: 255
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.integer "content_id", limit: 4
+    t.string  "file",       limit: 255
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "name",             limit: 255
+    t.text     "about",            limit: 65535
+    t.integer  "price",            limit: 4
+    t.integer  "goods_group_id",   limit: 4
+    t.integer  "gender_id",        limit: 4
+    t.boolean  "the_best_of_week"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.string   "image",            limit: 255
+    t.boolean  "wholesale"
+    t.boolean  "avaible"
+  end
 
 end
