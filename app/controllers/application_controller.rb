@@ -20,7 +20,11 @@ class ApplicationController < ActionController::Base
 
   def authenticate
       authenticate_or_request_with_http_basic do |username, password|
-      username == "mosevich@mail.ua" && password == "kk3801108ad"
+      if (username == "mosevich@mail.ua" && password == "kk3801108ad")
+        true
+      else
+        redirect_to '/products/notlogged'
+      end
     end
   end
 

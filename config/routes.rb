@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'static/delivery'
   #FAQ and reciewed messages
   get 'static/faq'
+  get 'products/notlogged'
   #get 'say/review'
   #додали і тепер треба команду 
   #rake routes. DONE))
