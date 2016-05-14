@@ -4,6 +4,7 @@ class Product < ActiveRecord::Base
   validates :price, numericality: {greater_than_or_equal_to: 0.01}
   has_one :goods_group
   has_one :gender	
+  has_many :cart_item2s 
   
   has_many :images, :dependent => :destroy
   accepts_nested_attributes_for :images, :allow_destroy => true

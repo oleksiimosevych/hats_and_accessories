@@ -61,5 +61,9 @@
     
     <p>Опис: <%=@product.about %></p>
     <h2><p>
-    <!--%=link_to 'Замовити', product_path(@product), class: "btn btn-default" %></h2-->
+    <% form_for @product.cart_item2s.build do |f| %>
+    <%= f.hidden_field :product_id %>
+    <%= f.submit "Add to Cart" %>
+    <% end %> 
+    <%=link_to 'Замовити', cart_path(:product_id), class: "btn btn-default" %></h2>
 </div><!--/.col-xs-6.col-lg-4-->

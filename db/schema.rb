@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160504134330) do
+ActiveRecord::Schema.define(version: 20160514075051) do
+
+  create_table "cart_item2s", force: :cascade do |t|
+    t.integer  "product_id", limit: 4
+    t.integer  "cart_id",    limit: 4
+    t.integer  "quantity",   limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
 
   create_table "cart_items", force: :cascade do |t|
     t.integer "owner_id",   limit: 4
@@ -20,6 +28,12 @@ ActiveRecord::Schema.define(version: 20160504134330) do
     t.integer "item_id",    limit: 4
     t.string  "item_type",  limit: 255
     t.float   "price",      limit: 24
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.string   "token",      limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "genders", force: :cascade do |t|
