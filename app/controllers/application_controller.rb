@@ -10,13 +10,13 @@ class ApplicationController < ActionController::Base
   	@genders = Gender.all
   	@goods_groups = GoodsGroup.all
   end
-
-  def add_to_cart
-    @cart.add(product, product.price, quantity)
-  end
-  def rm_from_cart
-    @cart.remove(product, quantity)
-  end
+#added here 2 methods add and rm from cart/// but it was not needed
+#  def add_to_cart
+ #   @cart.add(product, product.price, quantity)
+ # end
+ # def rm_from_cart
+ #   @cart.remove(product, quantity)
+ # end
 
   def authenticate
       authenticate_or_request_with_http_basic do |username, password|
@@ -29,7 +29,7 @@ class ApplicationController < ActionController::Base
   end
 
   private
-  
+  #this was needed here
   def current_cart 
     @current_cart ||= Cart.first || Cart.create!
   end

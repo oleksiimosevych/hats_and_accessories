@@ -12,7 +12,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20160514075051) do
-
+#my schema.rb file is here...
   create_table "cart_item2s", force: :cascade do |t|
     t.integer  "product_id", limit: 4
     t.integer  "cart_id",    limit: 4
