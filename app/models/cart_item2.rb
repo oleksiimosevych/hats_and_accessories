@@ -1,4 +1,5 @@
 class CartItem2 < ActiveRecord::Base
+  #it would be CartItem but i had that name. what to do?
   belongs_to :product
   belongs_to :cart
   

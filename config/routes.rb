@@ -27,6 +27,7 @@ resources :productos
 resources :goods_groups
 resources :genders
 resources :images
+#added here
 resources :cart_item2s
 resources :carts
 #map.current_cart 'cart', :controller => 'carts', :action => 'show' 
