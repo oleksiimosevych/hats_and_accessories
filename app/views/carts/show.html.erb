@@ -1,28 +1,15 @@
 <!--this page was added here-->
 
-<table id="cart_items">
-  <tr>
-    <th>Product</th>
-    <th>Qty</th>
-    <th class="price">Unit Price</th>
-    <th class="price">Full Price</th>
-  </tr>
+    <h5>Unit Price| Full Price</h5>
   <% for cart_item2 in @cart.cart_item2s %>
-    <tr class="<%= cycle :odd, :even %>">
-      <td><%=h cart_item2.product.name %></td>
-      <td class="qty"><%= cart_item2.quantity %></td>
-      <td class="price"><%= number_to_currency(cart_item2.unit_price) %></td>
-      <td class="price"><%= number_to_currency(cart_item2.full_price) %></td>
-    </tr>
+      <div><%= @product.name %></div>
+      <div><%= @cart_item2.quantity %></div>
+      <div><%= number_to_currency(cart_item2.unit_price) %></div>
+      <div><%= number_to_currency(cart_item2.full_price) %></div>
+    
   <% end %>
-  <tr>
-    <td class="total price" colspan="4">
-      Total: <%= number_to_currency @cart.total_price %>
-    </td>
-  </tr>
-</table>
-
-<p>
+     <p> Total: <%= number_to_currency @cart.total_price %></p>
+    <p>
   <% if session[:last_product_page] %>
     <%= link_to "Continue Shopping", session[:last_product_page] %> |
   <% end %>

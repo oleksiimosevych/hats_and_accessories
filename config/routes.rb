@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   
-  get 'cart_items/create'
+#  get 'cart_items/create'
 
-  get 'carts/show'
+#  get 'carts/show'
 
   get 'image/new'
 
@@ -30,7 +30,7 @@ resources :images
 #added here
 resources :cart_item2s
 resources :carts
-#map.current_cart 'cart', :controller => 'carts', :action => 'show' 
+get '/cart', to: 'carts#show', defaults: { id: 'current' }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
